@@ -18,7 +18,7 @@ const SavedFunds = () => {
       return;
     }
 
-    axios.get('http://localhost:5000/user/saved-funds', {
+    axios.get('https://mutual-fund-backend-nbnb.onrender.com/user/saved-funds', {
       headers: {
         Authorization: `${token}`
       }
@@ -36,7 +36,7 @@ const SavedFunds = () => {
   const handleDelete = async (schemeCode) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.delete(`http://localhost:5000/user/delete-fund/${schemeCode}`, {
+      await axios.delete(`https://mutual-fund-backend-nbnb.onrender.com/user/delete-fund/${schemeCode}`, {
         headers: {
           Authorization: `${token}`,
         },
