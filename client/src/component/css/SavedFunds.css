@@ -1,0 +1,107 @@
+/* src/components/SavedFunds.css */
+
+.saved-page {
+  min-height: 100vh;
+  background: linear-gradient(to right top, #141e30, #243b55);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.saved-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.saved-heading {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.fund-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fund-item {
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.fund-item:hover {
+  background: rgba(0, 198, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.fund-item a {
+  color: #00c6ff;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #00c6ff;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.error {
+  color: #ff6b6b;
+  margin-top: 10px;
+}
+
+.no-funds {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+  color: #ccc;
+}
+
+.fund-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px 14px;
+  background-color: #1f2d3a;
+  border-radius: 10px;
+  color: white;
+}
+
+.fund-link {
+  text-decoration: none;
+  color: #00c6ff;
+  font-weight: 500;
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #e60000;
+}
