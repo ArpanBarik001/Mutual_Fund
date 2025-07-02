@@ -13,7 +13,7 @@ export default function Login() {
         password
     };
     axios
-    .post("http://localhost:5000/user/login",data)
+    .post("https://mutual-fund-backend-nbnb.onrender.com/user/login",data)
     .then((response)=>{
         localStorage.setItem("token",response.data.token);
         localStorage.setItem("userAvatar", response.data.avatar);
