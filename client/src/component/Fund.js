@@ -13,7 +13,7 @@ export default function Fund() {
             .then(data => setFundData(data))
             .catch(err => console.error(err));
 
-            axios.get('http://localhost:5000/user/saved-funds', {
+            axios.get('https://mutual-fund-backend-nbnb.onrender.com/user/saved-funds', {
       headers: {
         Authorization: `${token}`
       }
@@ -31,7 +31,7 @@ export default function Fund() {
 
         try {
              await axios.post(
-                'http://localhost:5000/user/save-fund',
+                'https://mutual-fund-backend-nbnb.onrender.com/user/save-fund',
                 {
                     fund: {
                         schemeCode: fundData.meta.scheme_code,
