@@ -20,7 +20,7 @@ export default function Register() {
             password2
         };
         axios
-        .post("http://localhost:5000/user/register",data)
+        .post("https://mutual-fund-backend-nbnb.onrender.com/user/register",data)
         .then((response)=>{
             localStorage.setItem("userAvatar", response.data.avatar);
             // console.log(data);
