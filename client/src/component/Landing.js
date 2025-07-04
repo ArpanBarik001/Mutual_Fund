@@ -52,6 +52,29 @@ export default function Landing()  {
   }, 300); // debounce delay
 }, [query, funds]);
 
+const handleSearchClick = () => {
+  if (query.trim() === '') {
+    setFiltered([]);
+    setLoading(false);
+    return;
+  }
+
+  setLoading(true);
+
+  const results = funds
+    .filter(f =>
+      f.schemeName.toLowerCase().includes(query.toLowerCase())
+    )
+    .slice(0, 20);
+
+  setFiltered(results);
+
+  setTimeout(() => {
+    setLoading(false);
+  }, 100);
+};
+
+
 
   const handleSavedFundsClick = () => {
     navigate('/saved');
@@ -62,13 +85,26 @@ export default function Landing()  {
     <div className="page">
       <div className="main-box">
         <h1 className="heading">Search Mutual Funds</h1>
-        <input
+        {/* <input
           className="search-input"
           type="text"
           placeholder="Enter fund name..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-        />
+        /> */}
+        <div className="input-wrapper">
+  <input
+    className="search-input"
+    type="text"
+    placeholder="Enter fund name..."
+    value={query}
+    onChange={(e) => setQuery(e.target.value)}
+  />
+  <button className="search-button" onClick={handleSearchClick}>
+    Search
+  </button>
+</div>
+
         <ul className="result-list">
           {loading ? (
             <Spinner />
@@ -84,6 +120,8 @@ export default function Landing()  {
           ))
           )}
         </ul>
+        
+
       </div>
       <button className="saved-funds-button" onClick={handleSavedFundsClick}>
          View Saved Funds

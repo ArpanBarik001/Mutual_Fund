@@ -51,7 +51,7 @@ export default function Login() {
         <div className="inputBox">
           <input type="submit" onClick={handlesubmit} value="Login"/>
         </div>
-        <p>Create Account <Link to='/register' className='login'>Sign Up</Link></p>
+        <p>Create Account <Link to='/' className='login'>Sign Up</Link></p>
       </div>
     </div>
   )
